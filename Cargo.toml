@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-llvm_ffi = {path="src/llvm_ffi"}
+inkwell = {path = "src/inkwell"}

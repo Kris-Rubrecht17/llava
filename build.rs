@@ -14,10 +14,11 @@ fn main(){
     #[cfg(target_os = "linux")]
     {    
         println!("cargo::rustc-link-arg=-l:libLLVM.so.21.1");
+        println!("cargo::rustc-link-lib=static=wrapper_linux")
     }
     #[cfg(target_os = "windows")]
     {
-        println!("cargo::rustc-link-arg=-l:LLVM-C.dll");
+        println!("cargo::rustc-link-lib=dylib=LLVM-C");
     }
     println!("cargo:rustc-link-arg=-Wl,-rpath,llvm/bin");
     
